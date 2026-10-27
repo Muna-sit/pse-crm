@@ -250,23 +250,88 @@ tbody tr:hover {
 }
 
 /* login page */
+.login-page {
+  display: flex;
+  min-height: 100vh;
+}
+
+.login-side {
+  flex: 1;
+  background: #1b212d;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.login-logo {
+  width: 160px;
+  margin-bottom: 25px;
+}
+
+.login-side h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.login-side p {
+  color: #fdba74;
+  margin: 6px 0 0;
+}
+
+.login-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
 .login-box {
-  width: 320px;
-  margin: 80px auto;
-  padding: 30px 35px;
+  width: 100%;
+  max-width: 340px;
   background: #fff;
-  border-top: 4px solid #ea580c;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 35px;
+  border-radius: 10px;
+  border: 1px solid #f0ebe3;
 }
 
 .login-box h2 {
-  margin-top: 0;
-  border: none;
+  margin: 0;
+}
+
+.login-box label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 15px 0 6px;
 }
 
 .login-box input {
   width: 100%;
+}
+
+.login-box button {
+  width: 100%;
+  margin-top: 22px;
+  padding: 10px;
+}
+
+/* phones: logo on top, form below */
+@media (max-width: 700px) {
+  .login-page {
+    flex-direction: column;
+  }
+  .login-side {
+    flex: none;
+    padding: 30px;
+  }
+  .login-logo {
+    width: 110px;
+    margin-bottom: 12px;
+  }
 }
 
 /* add / edit forms */

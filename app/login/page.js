@@ -24,20 +24,30 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="login-box">
-      <h2>PSE CRM - Login</h2>
-      <form onSubmit={handleLogin}>
-        <p>
-          Email<br />
+    <div className="login-page">
+      {/* left side with logo */}
+      <div className="login-side">
+        <img src="/jaago-logo.png" alt="JAAGO Foundation" className="login-logo" />
+        <h1>PSE CRM</h1>
+        <p>Private Sector Engagement</p>
+      </div>
+
+      {/* right side with form */}
+      <div className="login-main">
+        <form onSubmit={handleLogin} className="login-box">
+          <h2>Welcome back</h2>
+          <p className="subtitle">Log in to continue</p>
+
+          <label>Email</label>
           <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        </p>
-        <p>
-          Password<br />
+
+          <label>Password</label>
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-        </p>
-        {error && <p className="error">{error}</p>}
-        <button type="submit">Login</button>
-      </form>
+
+          {error && <p className="error">{error}</p>}
+          <button type="submit">Login</button>
+        </form>
+      </div>
     </div>
   );
 }
